@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59DDF6B4282E97CF0087E6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DDF6B3282E97CF0087E6B5 /* AppDelegate.swift */; };
+		59DDF6B6282E97CF0087E6B5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59DDF6B5282E97CF0087E6B5 /* GameScene.sks */; };
+		59DDF6B8282E97CF0087E6B5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59DDF6B7282E97CF0087E6B5 /* Actions.sks */; };
+		59DDF6BA282E97CF0087E6B5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DDF6B9282E97CF0087E6B5 /* GameScene.swift */; };
+		59DDF6BC282E97CF0087E6B5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DDF6BB282E97CF0087E6B5 /* GameViewController.swift */; };
+		59DDF6BF282E97CF0087E6B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DDF6BD282E97CF0087E6B5 /* Main.storyboard */; };
+		59DDF6C1282E97D90087E6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59DDF6C0282E97D90087E6B5 /* Assets.xcassets */; };
+		59DDF6CC282E97D90087E6B5 /* AsteroidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DDF6CB282E97D90087E6B5 /* AsteroidsTests.swift */; };
+		59DDF6D7282E97D90087E6B5 /* AsteroidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DDF6D6282E97D90087E6B5 /* AsteroidsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59DDF6C8282E97D90087E6B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59DDF6A8282E97CF0087E6B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59DDF6AF282E97CF0087E6B5;
+			remoteInfo = Asteroids;
+		};
+		59DDF6D3282E97D90087E6B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59DDF6A8282E97CF0087E6B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59DDF6AF282E97CF0087E6B5;
+			remoteInfo = Asteroids;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59DDF6B0282E97CF0087E6B5 /* Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DDF6B3282E97CF0087E6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59DDF6B5282E97CF0087E6B5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		59DDF6B7282E97CF0087E6B5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		59DDF6B9282E97CF0087E6B5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		59DDF6BB282E97CF0087E6B5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		59DDF6BE282E97CF0087E6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59DDF6C0282E97D90087E6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59DDF6C2282E97D90087E6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DDF6C7282E97D90087E6B5 /* AsteroidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsteroidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DDF6CB282E97D90087E6B5 /* AsteroidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsTests.swift; sourceTree = "<group>"; };
+		59DDF6CD282E97D90087E6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59DDF6D2282E97D90087E6B5 /* AsteroidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsteroidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59DDF6D6282E97D90087E6B5 /* AsteroidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsUITests.swift; sourceTree = "<group>"; };
+		59DDF6D8282E97D90087E6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59DDF6AD282E97CF0087E6B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DDF6C4282E97D90087E6B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DDF6CF282E97D90087E6B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59DDF6A7282E97CF0087E6B5 = {
+			isa = PBXGroup;
+			children = (
+				59DDF6B2282E97CF0087E6B5 /* Asteroids */,
+				59DDF6CA282E97D90087E6B5 /* AsteroidsTests */,
+				59DDF6D5282E97D90087E6B5 /* AsteroidsUITests */,
+				59DDF6B1282E97CF0087E6B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59DDF6B1282E97CF0087E6B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59DDF6B0282E97CF0087E6B5 /* Asteroids.app */,
+				59DDF6C7282E97D90087E6B5 /* AsteroidsTests.xctest */,
+				59DDF6D2282E97D90087E6B5 /* AsteroidsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59DDF6B2282E97CF0087E6B5 /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				59DDF6B3282E97CF0087E6B5 /* AppDelegate.swift */,
+				59DDF6B5282E97CF0087E6B5 /* GameScene.sks */,
+				59DDF6B7282E97CF0087E6B5 /* Actions.sks */,
+				59DDF6B9282E97CF0087E6B5 /* GameScene.swift */,
+				59DDF6BB282E97CF0087E6B5 /* GameViewController.swift */,
+				59DDF6BD282E97CF0087E6B5 /* Main.storyboard */,
+				59DDF6C0282E97D90087E6B5 /* Assets.xcassets */,
+				59DDF6C2282E97D90087E6B5 /* Info.plist */,
+			);
+			path = Asteroids;
+			sourceTree = "<group>";
+		};
+		59DDF6CA282E97D90087E6B5 /* AsteroidsTests */ = {
+			isa = PBXGroup;
+			children = (
+				59DDF6CB282E97D90087E6B5 /* AsteroidsTests.swift */,
+				59DDF6CD282E97D90087E6B5 /* Info.plist */,
+			);
+			path = AsteroidsTests;
+			sourceTree = "<group>";
+		};
+		59DDF6D5282E97D90087E6B5 /* AsteroidsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				59DDF6D6282E97D90087E6B5 /* AsteroidsUITests.swift */,
+				59DDF6D8282E97D90087E6B5 /* Info.plist */,
+			);
+			path = AsteroidsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59DDF6AF282E97CF0087E6B5 /* Asteroids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DDF6DB282E97D90087E6B5 /* Build configuration list for PBXNativeTarget "Asteroids" */;
+			buildPhases = (
+				59DDF6AC282E97CF0087E6B5 /* Sources */,
+				59DDF6AD282E97CF0087E6B5 /* Frameworks */,
+				59DDF6AE282E97CF0087E6B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Asteroids;
+			productName = Asteroids;
+			productReference = 59DDF6B0282E97CF0087E6B5 /* Asteroids.app */;
+			productType = "com.apple.product-type.application";
+		};
+		59DDF6C6282E97D90087E6B5 /* AsteroidsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DDF6DE282E97D90087E6B5 /* Build configuration list for PBXNativeTarget "AsteroidsTests" */;
+			buildPhases = (
+				59DDF6C3282E97D90087E6B5 /* Sources */,
+				59DDF6C4282E97D90087E6B5 /* Frameworks */,
+				59DDF6C5282E97D90087E6B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59DDF6C9282E97D90087E6B5 /* PBXTargetDependency */,
+			);
+			name = AsteroidsTests;
+			productName = AsteroidsTests;
+			productReference = 59DDF6C7282E97D90087E6B5 /* AsteroidsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		59DDF6D1282E97D90087E6B5 /* AsteroidsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59DDF6E1282E97D90087E6B5 /* Build configuration list for PBXNativeTarget "AsteroidsUITests" */;
+			buildPhases = (
+				59DDF6CE282E97D90087E6B5 /* Sources */,
+				59DDF6CF282E97D90087E6B5 /* Frameworks */,
+				59DDF6D0282E97D90087E6B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59DDF6D4282E97D90087E6B5 /* PBXTargetDependency */,
+			);
+			name = AsteroidsUITests;
+			productName = AsteroidsUITests;
+			productReference = 59DDF6D2282E97D90087E6B5 /* AsteroidsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59DDF6A8282E97CF0087E6B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					59DDF6AF282E97CF0087E6B5 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					59DDF6C6282E97D90087E6B5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 59DDF6AF282E97CF0087E6B5;
+					};
+					59DDF6D1282E97D90087E6B5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 59DDF6AF282E97CF0087E6B5;
+					};
+				};
+			};
+			buildConfigurationList = 59DDF6AB282E97CF0087E6B5 /* Build configuration list for PBXProject "Asteroids" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59DDF6A7282E97CF0087E6B5;
+			productRefGroup = 59DDF6B1282E97CF0087E6B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59DDF6AF282E97CF0087E6B5 /* Asteroids */,
+				59DDF6C6282E97D90087E6B5 /* AsteroidsTests */,
+				59DDF6D1282E97D90087E6B5 /* AsteroidsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59DDF6AE282E97CF0087E6B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DDF6BF282E97CF0087E6B5 /* Main.storyboard in Resources */,
+				59DDF6B6282E97CF0087E6B5 /* GameScene.sks in Resources */,
+				59DDF6C1282E97D90087E6B5 /* Assets.xcassets in Resources */,
+				59DDF6B8282E97CF0087E6B5 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DDF6C5282E97D90087E6B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DDF6D0282E97D90087E6B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59DDF6AC282E97CF0087E6B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DDF6BA282E97CF0087E6B5 /* GameScene.swift in Sources */,
+				59DDF6BC282E97CF0087E6B5 /* GameViewController.swift in Sources */,
+				59DDF6B4282E97CF0087E6B5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DDF6C3282E97D90087E6B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DDF6CC282E97D90087E6B5 /* AsteroidsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59DDF6CE282E97D90087E6B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59DDF6D7282E97D90087E6B5 /* AsteroidsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59DDF6C9282E97D90087E6B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59DDF6AF282E97CF0087E6B5 /* Asteroids */;
+			targetProxy = 59DDF6C8282E97D90087E6B5 /* PBXContainerItemProxy */;
+		};
+		59DDF6D4282E97D90087E6B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59DDF6AF282E97CF0087E6B5 /* Asteroids */;
+			targetProxy = 59DDF6D3282E97D90087E6B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59DDF6BD282E97CF0087E6B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59DDF6BE282E97CF0087E6B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59DDF6D9282E97D90087E6B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59DDF6DA282E97D90087E6B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59DDF6DC282E97D90087E6B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LP4Y3PUH6;
+				INFOPLIST_FILE = Asteroids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bduff45.Asteroids;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59DDF6DD282E97D90087E6B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LP4Y3PUH6;
+				INFOPLIST_FILE = Asteroids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bduff45.Asteroids;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		59DDF6DF282E97D90087E6B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LP4Y3PUH6;
+				INFOPLIST_FILE = AsteroidsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bduff45.AsteroidsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroids.app/Asteroids";
+			};
+			name = Debug;
+		};
+		59DDF6E0282E97D90087E6B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LP4Y3PUH6;
+				INFOPLIST_FILE = AsteroidsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bduff45.AsteroidsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroids.app/Asteroids";
+			};
+			name = Release;
+		};
+		59DDF6E2282E97D90087E6B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LP4Y3PUH6;
+				INFOPLIST_FILE = AsteroidsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bduff45.AsteroidsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Asteroids;
+			};
+			name = Debug;
+		};
+		59DDF6E3282E97D90087E6B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LP4Y3PUH6;
+				INFOPLIST_FILE = AsteroidsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bduff45.AsteroidsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Asteroids;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59DDF6AB282E97CF0087E6B5 /* Build configuration list for PBXProject "Asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DDF6D9282E97D90087E6B5 /* Debug */,
+				59DDF6DA282E97D90087E6B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DDF6DB282E97D90087E6B5 /* Build configuration list for PBXNativeTarget "Asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DDF6DC282E97D90087E6B5 /* Debug */,
+				59DDF6DD282E97D90087E6B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DDF6DE282E97D90087E6B5 /* Build configuration list for PBXNativeTarget "AsteroidsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DDF6DF282E97D90087E6B5 /* Debug */,
+				59DDF6E0282E97D90087E6B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59DDF6E1282E97D90087E6B5 /* Build configuration list for PBXNativeTarget "AsteroidsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DDF6E2282E97D90087E6B5 /* Debug */,
+				59DDF6E3282E97D90087E6B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59DDF6A8282E97CF0087E6B5 /* Project object */;
+}
