@@ -41,17 +41,28 @@ extension CGPoint {
 }
 
 
+struct PhysicsCategory {
+  static let none       : UInt32 = 0
+  static let all        : UInt32 = UInt32.max
+  static let rockPhys   : UInt32 = 0b1       // 1
+  static let shipPhys   : UInt32 = 0b10      // 2
+  static let projPhys   : UInt32 = 0b11      // 3
+}
 
 
 
-class GameScene: SKScene, SKPhysicsContactDelegate
+class GameScene: SKScene
 {
     
-    
+   
     var ship:SKSpriteNode = SKSpriteNode()
+    
+    
+    
     let rotateRec = UIRotationGestureRecognizer()
     let tapRec = UITapGestureRecognizer()
     let side = [0, 1, 2, 3]
+    var projVect = CGVector()
     
     var theRotation:CGFloat = 0
     var offset:CGFloat = 0
@@ -61,12 +72,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view: SKView)
     {
-        
+
+       
         if let someShip:SKSpriteNode = self.childNode(withName: "Ship") as? SKSpriteNode
         {
             
             ship = someShip
-        
+            someShip.physicsBody?.isDynamic = true
+            someShip.physicsBody?.categoryBitMask = PhysicsCategory.shipPhys
+            someShip.physicsBody?.contactTestBitMask = PhysicsCategory.rockPhys
+            someShip.physicsBody?.collisionBitMask = PhysicsCategory.none
         }
        
         rotateRec.addTarget(self, action: #selector(GameScene.rotatedView(_:) ))
@@ -86,8 +101,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         
         run(SKAction.repeatForever(
               SKAction.sequence([
-                SKAction.run(addAsteroid),
-                SKAction.wait(forDuration: 4.0)
+                SKAction.wait(forDuration: 4.0),
+                SKAction.run(addAsteroid)
                 ])
             ))
 
@@ -131,8 +146,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let yVec:CGFloat = cos(theRotation) * 10
         
         let theVector:CGVector = CGVector(dx: xVec, dy: yVec)
-        
+        projVect = theVector
         ship.physicsBody?.applyImpulse(theVector)
+        
+        shooting()
+        
     }
     
     
@@ -155,12 +173,44 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         return(randy)
     }
     
+    
+    func shooting()
+    {
+        let projectile = SKSpriteNode(imageNamed: "projectile")
+        
+        projectile.physicsBody = SKPhysicsBody(circleOfRadius: 8, center: projectile.anchorPoint)
+        projectile.physicsBody?.isDynamic = true
+        projectile.physicsBody?.categoryBitMask = PhysicsCategory.projPhys
+        projectile.physicsBody?.contactTestBitMask = PhysicsCategory.rockPhys
+        projectile.physicsBody?.collisionBitMask = PhysicsCategory.none
+        
+        projectile.position = ship.position
+        projectile.size = CGSize(width: 16, height: 16)
+        addChild(projectile)
+        
+        projectile.physicsBody?.applyImpulse(projVect)
+        
+        
+    }
+    
+    
+    
+   
+    
     func addAsteroid()
     {
         let asteroid = SKSpriteNode(imageNamed: "rock")
         
+        asteroid.physicsBody = SKPhysicsBody(circleOfRadius: 175, center: asteroid.anchorPoint)
+        asteroid.physicsBody?.isDynamic = true
+        asteroid.physicsBody?.categoryBitMask = PhysicsCategory.rockPhys
+        asteroid.physicsBody?.contactTestBitMask = PhysicsCategory.projPhys
+        asteroid.physicsBody?.contactTestBitMask = PhysicsCategory.shipPhys
+        asteroid.physicsBody?.collisionBitMask = PhysicsCategory.none
+        
         var asteroidx = CGFloat()
         var asteroidy = CGFloat()
+       
         
         var randwall = Int.random(in: 1...4)
         if randwall == 1
@@ -184,24 +234,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate
             asteroidy = yValue()
         }
        
+        var shipLocation = ship.position
+        
         asteroid.position = CGPoint(x: asteroidx, y: asteroidy)
         asteroid.size = CGSize(width: 350, height: 350)
         
+        
+        let offset = shipLocation - asteroid.position
+        
+        
         addChild(asteroid)
         
-        let actualDuration = random(min: CGFloat(9.0), max: CGFloat(20.0))
         
+        let direction = offset.normalized()
         
+        let travelDistance = direction * 5000
         
+        let trueDestination = travelDistance + asteroid.position
         
-        let actionMove = SKAction.move(to: CGPoint(x: ship.position.x, y: ship.position.y), duration: TimeInterval(actualDuration))
-          let actionMoveDone = SKAction.removeFromParent()
+        let actualDuration = random(min: CGFloat(30.0), max: CGFloat(40.0))
+        
+        let actionMove = SKAction.move(to: trueDestination, duration: TimeInterval(actualDuration))
+        
+        let actionMoveDone = SKAction.removeFromParent()
           asteroid.run(SKAction.sequence([actionMove, actionMoveDone]))
-      
         
     }
     
-    
+    func asteroidProjectileCollision(projectile: SKSpriteNode, asteroid: SKSpriteNode)
+    {
+        print("ship hit")
+        projectile.removeFromParent()
+        asteroid.removeFromParent()
+        
+    }
     
     
     
@@ -240,5 +306,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     }
     
     
-   
+    
+
+}
+
+
+extension GameScene: SKPhysicsContactDelegate
+{
+    func didBegin(_ contact: SKPhysicsContact) {
+
+      var firstBody: SKPhysicsBody
+      var secondBody: SKPhysicsBody
+      if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+        firstBody = contact.bodyA
+        secondBody = contact.bodyB
+      } else {
+        firstBody = contact.bodyB
+        secondBody = contact.bodyA
+      }
+
+
+      if ((firstBody.categoryBitMask & PhysicsCategory.rockPhys != 0) &&
+          (secondBody.categoryBitMask & PhysicsCategory.shipPhys != 0)) {
+        if let asteroidphysics = firstBody.node as? SKSpriteNode,
+          let projectilephysics = secondBody.node as? SKSpriteNode {
+          asteroidProjectileCollision(projectile: projectilephysics, asteroid: asteroidphysics)
+        }
+      }
+    }
+
 }
