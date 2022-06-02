@@ -73,7 +73,7 @@ class GameScene: SKScene
     override func didMove(to view: SKView)
     {
 
-       
+        physicsWorld.contactDelegate = self
         if let someShip:SKSpriteNode = self.childNode(withName: "Ship") as? SKSpriteNode
         {
             
