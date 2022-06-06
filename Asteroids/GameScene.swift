@@ -67,7 +67,7 @@ class GameScene: SKScene
     var theRotation:CGFloat = 0
     var offset:CGFloat = 0
     
-    
+    var gameOverBool = false
     
     
     override func didMove(to view: SKView)
@@ -176,6 +176,8 @@ class GameScene: SKScene
     
     func shooting()
     {
+        if gameOverBool == false
+        {
         let projectile = SKSpriteNode(imageNamed: "projectile")
         
         projectile.physicsBody = SKPhysicsBody(circleOfRadius: 8, center: projectile.anchorPoint)
@@ -190,7 +192,7 @@ class GameScene: SKScene
         
         projectile.physicsBody?.applyImpulse(projVect)
         
-        
+        }
     }
     
     
@@ -266,7 +268,17 @@ class GameScene: SKScene
         print("ship hit")
         projectile.removeFromParent()
         asteroid.removeFromParent()
-        
+        if projectile == ship || asteroid == ship
+        {
+            print("game over")
+            gameOverBool = true
+            let label = SKLabelNode(fontNamed: "Chalkduster")
+                label.text = "Game Over"
+                label.fontSize = 120
+                label.fontColor = SKColor.white
+                label.position = CGPoint(x: size.width/2, y: size.height/2)
+                addChild(label)
+        }
     }
     
     
